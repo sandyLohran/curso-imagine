@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;300;700;900&display=swap');
+
+*{
+    box-sizing: border-box; /* */
+}
+
+:root { /*Seletor proprio, para as informacoes principais do site */
+    --color-primary: #ffc500; /*Criado uma variavel para usar a cor */
+    font-family: 'Montserrat', sans-serif;   
+    font-size: 16px; /* 16px equivale a 1rem */
+
+}
+body{
+    margin: 0; /* Deixando a margem em 0 */
+    padding-top: 7.75rem ; /*adicionado um padding para empurrar a pagina para o top, assim o conteudo nao fica escondido */
+}
+
+ul{
+    display: flex; /* colocando a lista um do lado do outro */
+    list-style: none;/* tirando estilo da lista */
+    padding-right: 0; /* Tirando o espaço padding da esquerda */
+}
+
+/*Estilizando navbar, para estilizar classes usa o ' . ' antes   */
+.navbar{  
+    position:fixed;  /* fixar a caixa da navbar na tela */
+    display: grid; /* ##### */
+    grid-template-columns: 1fr 9fr; /* colocando duas colunas #####*/
+    align-items: center; /*alinhando os itens */
+    top: 0; /* fixando no topo da página */
+    left: 0;
+    width: 100%; /*Definindo largura */
+    height: 7.75rem;
+    padding: 0 1rem; /*Colocando um espaço, 0 foi para altura e o 1 para os lados */
+    
+    background-color: #000; /* Mudando a cor da caixa da navbar */
+    /* color decimal vermelho / verde / azul / transparencia - 0 - F*/
+    color: #fff; /* Mudando a cor das letras */
+    
+}
+
+.navbar__links{
+    justify-self: end; /* Alinhando o elemento  */
+}
+
+.navbar__links a {
+    color: #fff; /*Deixando os links com cor branca */
+    text-decoration: none; /*Tirando a barra que fica nos links */
+    font-weight: 300; /*Peso da fonte*/
+}
+
+.navbar__links a:hover{ /*Mudando a cor da escrita do menu quando passar o mouse */
+    color: var(--color-primary) ; /*Escolhendo a cor quando passar o mouse */
+}
+
+.navbar__links li { 
+    font-size: 0.875rem; /* tamanho da letra, 14 px = 14/16 = 0.875rem */
+    margin-right: 3rem; /* colocando uma margem dos li, assim dando espaço ultilaizando 10px logo 48/16 = 3rem*/
+    text-transform: uppercase; /*deixando os li em caixa alta*/
+
+}
+.logo--studion {
+    font-size: 2.375rem; /*tamanho da fonte*/
+    font-weight: 900; /*ecolhendo o peso da fonte*/
+    text-transform: uppercase; /*deixando os li em caixa alta*/
+    text-align: right; /*Alinhando o texto para direita*/
+    line-height: 1ch; /* unidade relativa ao tamanho da altura do glifo 0 da fonte*/
+}
+.logo--studion__subtitle{
+    font-size: 14px; /* tamanho da letra, 14 px = 14/16 = 0.875rem */
+    font-weight: 300; /*ecolhendo o peso da fonte*/
+
+
+}
+.copy--primary {
+    color: var(--color-primary);/* usando a cor criada por variavel, no texto ON da logo */
+
+}
