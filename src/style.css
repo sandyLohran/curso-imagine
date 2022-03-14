@@ -5,9 +5,11 @@
 }
 
 :root { /*Seletor proprio, para as informacoes principais do site */
-    --color-primary: #ffc500; /*Criado uma variavel para usar a cor */
+
     font-family: 'Montserrat', sans-serif;   
     font-size: 16px; /* 16px equivale a 1rem */
+    --color-primary: #ffc500; /*Criado uma variavel para usar a cor */
+    --default-padding: 1rem;
 
 }
 body{
@@ -24,6 +26,7 @@ ul{
 /*Estilizando navbar, para estilizar classes usa o ' . ' antes   */
 .navbar{  
     position:fixed;  /* fixar a caixa da navbar na tela */
+    z-index: 1;
     display: grid; /* ##### */
     grid-template-columns: 1fr 9fr; /* colocando duas colunas #####*/
     align-items: center; /*alinhando os itens */
@@ -74,5 +77,65 @@ ul{
 }
 .copy--primary {
     color: var(--color-primary);/* usando a cor criada por variavel, no texto ON da logo */
+
+}
+
+#slider {
+    
+    background-color: #000;
+    color: #fff;
+    /* background-image: url(./images/banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:  center; */
+    
+}
+.slider {
+    position: relative; /*deixa ele no topo do div pai*/
+    height: calc(100vh - 7.75rem);
+}
+.slide__background-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position:center ;
+}
+.slider__copy{
+    position: absolute; /*deixa ir para todo lado da tela  */
+    top: 6.25rem;
+    left: 50vw;
+}
+
+.slider__copy h6{
+    font-size: .9375rem;
+    font-weight: 400;  /*deixando a fonte regula*/
+    text-transform: uppercase; /*deixando o texto em caixa alta*/
+    letter-spacing: .1875rem; /*Afetando o espaçamento do txt*/
+}
+.slider__copy h2{
+    font-size: 6.25rem;
+    text-transform: uppercase;
+    line-height: 6.25rem;
+    
+}
+.slider__copy h2 span{
+    display: block; /*quebra de linha*/
+}
+.btn {
+    padding: 1rem 2.5rem;
+    color: var(--color-primary);
+    border:.125rem solid #fff ; /*Borda do botao */
+    border-radius: 5rem ; /*arredondando as bodas */
+    background: unset; /*tira as propriedades */
+    font-size: .9375rem ;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.5s all ease; /*efeito de transicao para efeitos*/
+}
+
+.btn:hover, .btn:active, .btn:focus{
+    border-color: var(--color-primary);
+    background-color: var(--color-primary);
+    color: #fff;
 
 }
