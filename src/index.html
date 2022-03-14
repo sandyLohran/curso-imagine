@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Studion</title>
 </head>
 
 <body>
-    <nav>
-        <h1>Studion<span><span>Eventos</span></span></h1>
-        <ul>
+    <nav class="navbar">
+        <h1 class="logo--studion">Studi<span class="copy--primary">on</span><br><span class="logo--studion__subtitle">Eventos</span></h1>       
+        <ul class="navbar__links">
             <li> <a href="#">Empresa</a></li>
             <li> <a href="#eventos">Eventos</a></li>
             <li> <a href="#">Galeria</a></li>
@@ -20,10 +21,15 @@
         </ul>
     </nav>
     <header>
-        <div id="slider"></div>
+        <div id="slider">
         <div class="slider">
-            <h6><span>Próximo evento</span> - Dia 25 de setembro às 19h</h6>
-            <h2><span>Creative</span> Minds</h2>
+            <img class="slide__background-image" src="./images/banner.jpg" alt="banner-studion">
+            <div class="slider__copy">
+                <h6 ><span class="copy--primary">Próximo evento</span> - Dia 25 de setembro às 19h</h6>
+                <h2><span class="copy--primary">Creative</span> Minds</h2>
+                <button class="btn btn--slide">Saiba Mais</button>
+            </div>
+        </div>
         </div>
     </header>
     <main>
@@ -38,6 +44,7 @@
                 <li>
                     <h3>+ de 300</h3> empresas atendidas
                 </li>
+                <button>saiba mais</button>
             </ul>
         </section>
         <section>
@@ -72,7 +79,7 @@
             <li><a href="https://www.youtube.com/" target="_blank">Youtube</a></li>
         </ul>
         <hr>
-        <p><small>Studion<span>ON - </span>Todos os direitos reservados</small></p>
+        <p><small>Studion<span>ON - </span>Todos os direitos reservados.</small></p>
     </footer>
 </body>
 
