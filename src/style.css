@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;300;700;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap');
 *{
     box-sizing: border-box; /* */
 }
@@ -8,8 +8,10 @@
 
     font-family: 'Montserrat', sans-serif;   
     font-size: 16px; /* 16px equivale a 1rem */
+    --color-copy: #333;
     --color-primary: #ffc500; /*Criado uma variavel para usar a cor */
     --default-padding: 1rem;
+    color: var(--color-copy);
 
 }
 body{
@@ -17,6 +19,13 @@ body{
     padding-top: 7.75rem ; /*adicionado um padding para empurrar a pagina para o top, assim o conteudo nao fica escondido */
 }
 
+header, main, footer{ /*mantendo o conteudo mesmo com tela pequena*/
+    overflow-x: hidden;
+}
+.container{
+    max-width: 1140px;
+    margin: 0 auto;
+}
 ul{
     display: flex; /* colocando a lista um do lado do outro */
     list-style: none;/* tirando estilo da lista */
@@ -26,20 +35,24 @@ ul{
 /*Estilizando navbar, para estilizar classes usa o ' . ' antes   */
 .navbar{  
     position:fixed;  /* fixar a caixa da navbar na tela */
-    z-index: 1;
+    z-index: 1;  
+    top: 0; /* fixando no topo da página */
+    left: 0;
+    width: 100%;
+    background-color: #000; /* Mudando a cor da caixa da navbar */
+    /* color decimal vermelho / verde / azul / transparencia - 0 - F*/
+    color: #fff; /* Mudando a cor das letras */
+}
+.navbar__container{
     display: grid; /* ##### */
     grid-template-columns: 1fr 9fr; /* colocando duas colunas #####*/
     align-items: center; /*alinhando os itens */
-    top: 0; /* fixando no topo da página */
-    left: 0;
+
     width: 100%; /*Definindo largura */
     height: 7.75rem;
     padding: 0 1rem; /*Colocando um espaço, 0 foi para altura e o 1 para os lados */
     
-    background-color: #000; /* Mudando a cor da caixa da navbar */
-    /* color decimal vermelho / verde / azul / transparencia - 0 - F*/
-    color: #fff; /* Mudando a cor das letras */
-    
+
 }
 
 .navbar__links{
@@ -92,7 +105,7 @@ ul{
 }
 .slider {
     position: relative; /*deixa ele no topo do div pai*/
-    height: calc(100vh - 7.75rem);
+    height: calc(90vh - 7.75rem);
 }
 .slide__background-image{
     width: 100%;
@@ -133,9 +146,68 @@ ul{
     transition: 0.5s all ease; /*efeito de transicao para efeitos*/
 }
 
-.btn:hover, .btn:active, .btn:focus{
+.btn:hover, .btn:active, .btn:focus,.btn--institutional{ /*efeito para passar o mouse e mudar o btn*/
     border-color: var(--color-primary);
     background-color: var(--color-primary);
     color: #fff;
 
+}
+#counter{
+    background-color: var(--color-primary);
+    color: #fff;
+    text-transform: uppercase;
+}
+.counter__container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /*criando colunas por igual 1fr 1fr 1fr, responsivo*/
+    place-items: center; /*centralizando*/
+    
+    padding: 4.375rem 1rem;
+
+}
+.counter__container h3{
+    font-size: 2.185rem;
+}
+
+.counter__container h3 small{
+    display: block;
+    font-size:1.25rem;
+}
+.institutional{
+    display: grid;
+    grid-template-columns:  2fr 1fr;
+    gap: 3.125rem;
+    align-items: center;
+    padding: 4.375rem;
+
+}
+
+.institutional__img{
+    max-width: 550px;
+}
+.institutional__copy{
+    padding: auto auto ;
+}
+.institutional__copy h6{
+    font-size: .875rem;
+    font-weight: 300;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    margin: 0;
+}
+.institutional__copy h4{
+    font-size: 1.5625rem;
+    margin-top: 1rem ;
+}
+.institutional p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.0625rem;
+    line-height: 1.6875rem;
+    margin: 0;
+    margin-bottom: 2.5rem;
+}
+.btn--institutional:hover{
+    color: var(--color-copy);
+    background: unset;
+    box-shadow: 0 1rem 1rem #0006;
 }
